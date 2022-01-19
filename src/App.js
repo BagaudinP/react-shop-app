@@ -1,6 +1,6 @@
-import Card from './components/Card';
-import Header from './components/Header';
-import Drawer from './components/Drawer';
+import Card from "./components/Card";
+import Header from "./components/Header";
+import Drawer from "./components/Drawer";
 
 function App() {
   return (
@@ -17,8 +17,6 @@ function App() {
         </div>
         <div className="d-flex">
           <Card />
-
-
         </div>
       </div>
     </div>
