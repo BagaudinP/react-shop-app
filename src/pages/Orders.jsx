@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import Card from "../components/Card/Card";
+import Info from "../components/Info";
 
 function Orders() {
   const [orders, setOrders] = React.useState([]);
@@ -21,14 +22,24 @@ function Orders() {
 
   return (
     <div className="content p-40">
-      <div className="d-flex align-center justify-between mb-40">
-        <h1>Мои покупки</h1>
-      </div>
-      <div className="d-flex flex-wrap">
-        {(isLoading ? [...Array(8)] : orders).map((item, index) => (
-          <Card key={index} loading={isLoading} {...item} />
-        ))}
-      </div>
+      {orders.length > 0 ? (
+        <>
+          <div className="d-flex align-center justify-between mb-40">
+            <h2>Мои покупки</h2>
+          </div>
+          <div className="d-flex flex-wrap">
+            {(isLoading ? [...Array(8)] : orders).map((item, index) => (
+              <Card key={index} loading={isLoading} {...item} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <Info
+          title="У вас нет заказов"
+          image="/img/sad-smile.png"
+          description="Оформите хотя бы один заказ."
+        />
+      )}
     </div>
   );
 }

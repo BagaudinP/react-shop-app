@@ -9,10 +9,10 @@ function Header(props) {
     <header className="d-flex justify-between align-center p-40">
       <div className="d-flex align-center cu-p">
         <Link style={{ display: "flex" }} to="/">
-          <img width={40} height={40} alt="img" src="/img/logo.png" />
+          <img width={40} height={40} alt="logo" src="/img/logo.png" />
           <div>
-            <h3 className="text-uppercase">React Sneakers</h3>
-            <p className="opacity-5">Магазин лучших кроссовок</p>
+            <h3 className="text-uppercase">Top Sneakers</h3>
+            <p className="opacity-5">Магазин эксклюзивных кроссовок</p>
           </div>
         </Link>
       </div>
